@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+ 
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Jogos Ifal</title>
+        <style type="text/css">
+            body {background-color: #81F79F; font-size: 12px}
+        </style> 
+    </h:head>
+    <h:body>
+        <div align="center">
+            <p:layout style="min-width:1020px;max-width:1020px;min-height:600px">  
+                <p:layoutUnit position="north" size="115">  
+                    <h:graphicImage url="logo.png" />
+                </p:layoutUnit>  
+ 
+                <p:layoutUnit position="west" size="220">  
+                    <ui:insert name="menu #{admBean.nome}">
+                        <h:form>
+                            <p:menu style="width: 200px">
+                                <p:submenu label="Identificação	">
+                                    <p:menuitem value="Login" icon="ui-icon-key" action="autentica.xhtml"/>
+                                   	<p:menuitem value="Equeci a senha" icon="ui-icon-refresh"/> 
+                                </p:submenu>
+                                    
+                                <p:submenu label="Gerenciar"> 
+                                    <p:menuitem value="Modalidades" icon="ui-icon-triangle-1-e" action="/consultaModalidades.xhtml"/> 
+                                    <p:menuitem value="Equipes" icon="ui-icon-triangle-1-e"/>   
+                                    <p:menuitem value="Grupos" icon="ui-icon-triangle-1-e"/> 
+                                    <p:menuitem value="Partidas" icon="ui-icon-triangle-1-e"/>                                     
+                             	</p:submenu>
+                                
+                                 <p:submenu label="Outros">  
+                                    <p:menuitem value="Raking" icon="ui-icon-triangle-1-e"/>
+                               		<p:menuitem value="Contato" icon="ui-icon-info"/>                                    
+                             	</p:submenu>
+                               
+                                    
+                                         
+                                
+                                
+                            </p:menu>
+                        </h:form>
+                    </ui:insert>
+                </p:layoutUnit>  
+                <p:layoutUnit position="center">  
+                    <ui:insert name="centro">
+                        PÁGINA INICIAL
+                    </ui:insert>
+                </p:layoutUnit>  
+            </p:layout>  
+        </div>
+    </h:body>
+</html>
